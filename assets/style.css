@@ -1,0 +1,153 @@
+/* Melhores Receitas 126 — identidade do Instagram: creme, chocolate, caramelo e dourado;
+   serifa forte nos títulos, cursiva nos destaques, fitas, selos e corações desenhados. */
+:root{
+  --bg:#f7efe4; --paper:#fffaf3; --surface:#fffdf9; --ink:#3b2418; --muted:#7a5a48; --line:#ead9c6;
+  --choc:#4a2c1d; --choc-ink:#fff7ee; --caramel:#c4642a; --caramel-soft:#f6e1cf; --gold:#b8863b; --gold-soft:#f3e6cc;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --script:"Dancing Script", "Brush Script MT", cursive;
+  --body:"DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius:22px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1d1410; --paper:#251a14; --surface:#2b1f18; --ink:#f6eadc; --muted:#cfb49f; --line:#3f2e24;
+  --choc:#120c09; --choc-ink:#f6eadc; --caramel:#e9894b; --caramel-soft:#3b261a; --gold:#e0b468; --gold-soft:#3a2d1b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1d1410; --paper:#251a14; --surface:#2b1f18; --ink:#f6eadc; --muted:#cfb49f; --line:#3f2e24;
+  --choc:#120c09; --choc-ink:#f6eadc; --caramel:#e9894b; --caramel-soft:#3b261a; --gold:#e0b468; --gold-soft:#3a2d1b; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--caramel)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.container{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;color:var(--ink)}
+.script{font-family:var(--script);font-weight:700;color:var(--caramel);letter-spacing:0}
+.eyebrow{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.heart{width:22px;height:22px;color:var(--caramel);flex:none}
+
+/* fita marrom, como "INGREDIENTES" nos posts */
+.ribbon{display:inline-flex;align-items:center;gap:8px;background:var(--choc);color:var(--choc-ink);font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:10px 18px 10px 14px;border-radius:999px 6px 6px 999px;width:fit-content}
+
+/* topo */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand .logo{width:40px;height:40px;border-radius:50%;background:var(--choc);color:var(--choc-ink);display:grid;place-items:center;font:700 15px var(--serif)}
+.brand b{font:800 21px/1 var(--serif)}
+.brand .script{font-size:24px;line-height:1}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:8px 14px;border-radius:999px}
+.nav a:hover{background:var(--caramel-soft);color:var(--caramel)}
+.nav a.ig{background:var(--choc);color:var(--choc-ink)}
+
+/* capa */
+.hero{background:radial-gradient(1200px 500px at 85% 0%,var(--caramel-soft),transparent 60%),var(--paper);border-bottom:1px solid var(--line)}
+.hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-block:64px 72px}
+.hero .container > *{min-width:0}
+.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.01em}
+.hero h1 .script{display:block;font-size:.82em;margin-top:.08em}
+.hero p{margin:18px 0 0;font-size:19px;color:var(--muted);max-width:48ch}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font:700 15px var(--body);text-decoration:none;background:var(--caramel);color:#fff;border:0;cursor:pointer;transition:transform .15s, box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--caramel)}
+.btn.dark{background:var(--choc);color:var(--choc-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero-card{position:relative}
+.hero-card .frame{border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 60px -30px rgba(74,44,29,.45);transform:rotate(1.5deg)}
+
+/* selo redondo, como "Simples, caseira e inesquecível!" */
+.stamp{position:absolute;left:-26px;bottom:-26px;width:132px;height:132px;border-radius:50%;background:var(--choc);color:var(--choc-ink);display:grid;place-items:center;text-align:center;padding:16px;font:700 19px/1.05 var(--script);box-shadow:0 0 0 6px var(--paper);transform:rotate(-8deg)}
+.stamp small{display:block;font:600 10px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+
+/* placa quando ainda não há foto: creme + título cursivo */
+.plate{aspect-ratio:4/5;display:grid;place-items:center;gap:10px;align-content:center;text-align:center;padding:28px;background:
+  radial-gradient(circle at 50% 40%,var(--surface),var(--gold-soft))}
+.plate .script{font-size:clamp(30px,4vw,44px);line-height:1.05}
+.plate .eyebrow{color:var(--muted)}
+.photo{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* listas */
+.section{padding-block:64px}
+.section-head{display:grid;gap:10px;margin-bottom:28px}
+.section-head h2{font-size:clamp(30px,4vw,44px);font-weight:800}
+.section-head h2 .script{font-size:1.05em}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 16px;font:600 14px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--choc);border-color:var(--choc);color:var(--choc-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:26px}
+.card{background:var(--surface);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);display:grid;grid-template-rows:auto 1fr;border:1px solid var(--line);transition:transform .2s, box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(74,44,29,.5)}
+.card .plate,.card .photo{aspect-ratio:4/3}
+.card .body{padding:18px 20px 22px;display:grid;gap:8px;align-content:start}
+.card h3{font-size:23px;font-weight:700}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;align-items:center}
+.pill{background:var(--caramel-soft);color:var(--caramel);border-radius:999px;padding:4px 11px;font-weight:700;font-size:12.5px}
+
+/* faixa do Instagram */
+.band{background:var(--choc);color:var(--choc-ink)}
+.band .container{padding-block:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{color:var(--choc-ink);font-size:clamp(26px,3.6vw,38px)}
+.band h2 .script{color:var(--gold)}
+.band p{margin:8px 0 0;opacity:.85}
+.band .btn{background:var(--gold);color:var(--choc)}
+
+.about{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.about .logo{width:84px;height:84px;border-radius:50%;background:var(--choc);color:var(--choc-ink);display:grid;place-items:center;font:700 26px var(--serif)}
+.about p{margin:0 0 10px;max-width:65ch}
+
+/* página da receita */
+.crumbs{font-size:14px;color:var(--muted);padding-block:22px 0}
+.crumbs a{color:var(--muted)}
+.recipe-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding-block:20px 48px}
+.recipe-hero > *{min-width:0}
+.recipe-hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800}
+.recipe-hero h1 .script{display:block;font-size:.9em}
+.recipe-hero .lead{font-size:19px;color:var(--muted);margin:16px 0 0;max-width:52ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px}
+.fact small{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.fact b{font:700 20px/1.3 var(--serif);font-variant-numeric:tabular-nums}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.recipe-body{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;padding-block:8px 64px}
+.recipe-body > *{min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:16px;align-content:start}
+.recipe-body .sticky{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
+.intro{max-width:65ch;margin:0}
+.ingredients{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.ingredients label{display:flex;gap:12px;align-items:flex-start;padding:8px 10px;border-radius:12px;cursor:pointer}
+.ingredients label:hover{background:var(--caramel-soft)}
+.ingredients input{width:20px;height:20px;margin-top:4px;accent-color:var(--caramel);flex:none}
+.ingredients input:checked + span{text-decoration:line-through;color:var(--muted)}
+.steps{list-style:none;counter-reset:passo;padding:0;margin:0;display:grid;gap:18px}
+.steps li{counter-increment:passo;display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(passo);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--caramel);color:#fff;font:700 17px var(--serif)}
+/* cartão "Dica:" como nos posts */
+.tip{position:relative;background:var(--gold-soft);border-radius:18px;padding:22px 22px 20px;transform:rotate(-.6deg)}
+.tip .script{font-size:32px;display:block;line-height:1;margin-bottom:6px}
+.note{font-size:14px;color:var(--muted)}
+
+/* rodapé */
+.site-footer{background:var(--paper);border-top:1px solid var(--line)}
+.site-footer .container{padding-block:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14.5px;color:var(--muted);align-items:center}
+.site-footer .script{font-size:22px}
+
+@media (max-width:860px){
+  .hero .container,.recipe-hero,.recipe-body{grid-template-columns:1fr}
+  .hero-card{max-width:420px;margin:0 auto 20px;width:100%}
+  .stamp{left:auto;right:-6px;bottom:-22px;width:112px;height:112px;font-size:16px}
+  .recipe-hero .frame-wrap{order:-1}
+  .recipe-body .sticky{position:static}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:420px){.facts{grid-template-columns:1fr 1fr}}
+@media print{
+  .site-header,.site-footer,.actions,.crumbs,.band{display:none}
+  body{background:#fff;color:#000}
+  .recipe-body{grid-template-columns:1fr}
+}
