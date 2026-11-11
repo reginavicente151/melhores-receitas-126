@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://reginavicente151.github.io/melhores-receitas-126/sitemap.xml

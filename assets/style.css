@@ -77,6 +77,12 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;co
 .section-head h2{font-size:clamp(30px,4vw,44px);font-weight:800}
 .section-head h2 .script{font-size:1.05em}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
+.search{display:block;max-width:560px}
+.search input{width:100%;font:500 16px var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:14px 20px 14px 48px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23b8863b' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:18px center}
+.search input:focus{outline:none;border-color:var(--caramel);box-shadow:0 0 0 4px var(--caramel-soft)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .chip{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 16px;font:600 14px var(--body);cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--choc);border-color:var(--choc);color:var(--choc-ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:26px}
