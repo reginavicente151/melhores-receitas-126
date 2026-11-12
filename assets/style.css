@@ -142,6 +142,10 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;co
 .erros li::before{content:counter(erro);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--choc);color:var(--choc-ink);display:grid;place-items:center;font:700 16px var(--serif)}
 .erros h3{font-size:20px;margin-bottom:4px}
 .erros p{margin:0;color:var(--muted);font-size:16px}
+.erros li.com-foto{display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:center}
+.erros li.com-foto > *{min-width:0}
+.erros li.com-foto img{width:150px;aspect-ratio:4/5;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+@media (max-width:520px){.erros li.com-foto{grid-template-columns:1fr}.erros li.com-foto img{width:100%;max-width:320px}}
 .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .gallery figure{margin:0;display:grid;gap:8px}
 .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--line)}
