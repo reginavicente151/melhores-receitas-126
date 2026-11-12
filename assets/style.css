@@ -137,6 +137,11 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;co
 .tip{position:relative;background:var(--gold-soft);border-radius:18px;padding:22px 22px 20px;transform:rotate(-.6deg)}
 .tip .script{font-size:32px;display:block;line-height:1;margin-bottom:6px}
 .note{font-size:14px;color:var(--muted)}
+.erros{list-style:none;counter-reset:erro;padding:0;margin:0;display:grid;gap:12px}
+.erros li{counter-increment:erro;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px 16px 64px;position:relative}
+.erros li::before{content:counter(erro);position:absolute;left:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--choc);color:var(--choc-ink);display:grid;place-items:center;font:700 16px var(--serif)}
+.erros h3{font-size:20px;margin-bottom:4px}
+.erros p{margin:0;color:var(--muted);font-size:16px}
 .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .gallery figure{margin:0;display:grid;gap:8px}
 .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px;border:1px solid var(--line)}
