@@ -137,6 +137,7 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;co
 .tip{position:relative;background:var(--gold-soft);border-radius:18px;padding:22px 22px 20px;transform:rotate(-.6deg)}
 .tip .script{font-size:32px;display:block;line-height:1;margin-bottom:6px}
 .note{font-size:14px;color:var(--muted)}
+.recipe-video{width:100%;max-width:420px;aspect-ratio:9/16;border-radius:18px;background:#000;border:1px solid var(--line)}
 .comments{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:12px}
 .comments p{margin:0}
 .comments .actions{margin-top:4px}
