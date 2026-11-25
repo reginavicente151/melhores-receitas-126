@@ -175,3 +175,12 @@ h1,h2,h3{font-family:var(--serif);line-height:1.08;text-wrap:balance;margin:0;co
   body{background:#fff;color:#000}
   .recipe-body{grid-template-columns:1fr}
 }
+
+.produtos{display:grid;gap:16px}
+.produto{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.produto > *{min-width:0}
+.produto img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px}
+.produto-body{display:grid;gap:8px}
+.produto h3{font-size:24px}
+.produto p{margin:0;color:var(--muted)}
+@media (max-width:620px){.produto{grid-template-columns:1fr}}
